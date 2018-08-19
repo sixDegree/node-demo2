@@ -13,8 +13,8 @@ server.listen(1337);
 ### 01.js
 
 code:
-	- 01.html (Client)
-	- 01.js (Server)
+- 01.html (Client)
+- 01.js (Server)
 
 ```
 node 01.js
@@ -47,7 +47,7 @@ app.listen(1337,function(){
 ### 02.js
 
 code:
-	- 02.js
+- 02.js
 
 
 ```
@@ -72,9 +72,9 @@ get 	/go2		301 -> index.html
 ### 03.js
 
 code:
-	- public/index.html
-	- 03.js
-	- logger.js
+- public/index.html
+- 03.js
+- logger.js
 
 ```
 node 03.js
@@ -143,8 +143,8 @@ get /locations/:name
 ### 04.js
 
 code:
-	- public/index.html
-	- 04.js
+- public/index.html
+- 04.js
 
 
 ```
@@ -166,9 +166,9 @@ app.route(url)
 ### 05.js
 
 code:
-	- public/index.html
-	- 05.js
-	- routes/blocks.js  - export as a node module
+- public/index.html
+- 05.js
+- routes/blocks.js  - export as a node module
 
 ```
 node 05.js
