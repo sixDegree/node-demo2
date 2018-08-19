@@ -1,7 +1,7 @@
 
 ## Chat Demo
 
-need package: socket.io@.9.19 express
+need package: `socket.io@0.9.19` `express`
 
 ```js
 var app=express();
@@ -27,8 +27,8 @@ Open 2 Client to visit URL: `http://localhost:1337`
 
 ## Express Demo
 
-need package: express
-屏幕快照 2018-08-19 下午9.35.03.png
+need package: `express`
+
 ```js
 var express=require("express");
 var app=express();
@@ -63,8 +63,8 @@ get 	/			"Hello world"
 get 	/blocks		["Fixed","Movable","Rotating"]
 get 	/blocks2	["Fixed","Movable","Rotating"]
 get 	/block3		"<ul><li>Fixed</li><li>Movable</li><li>Rotating</li></ul>"
-get 	/go			302 -> index.html
-get 	/go2		301 -> index.html
+get 	/go			302 index.html
+get 	/go2		301 index.html
 ```
 
 
@@ -90,8 +90,8 @@ get 	/blocks/:name
 post 	/blocks
 delete 	/blocks/:name
 
-get /locations				["Fixed","Movable","Rotating"]
-get /locations/:name
+get 	/locations				["Fixed","Movable","Rotating"]
+get 	/locations/:name
 ```
 
  *post*
