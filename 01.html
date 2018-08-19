@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chatter 01</title>
+	<link rel="stylesheet" type="text/css" href="vender/bootstrap/css/bootstrap.css" />
+</head>
+<body>
+	<br>
+	<div class="container">
+		<div class="panel panel-default">
+			<div class="panel-heading">Chatter<span id='clientName'></span></div>
+			<div class="panel-body" id="content" style="height:500px;"></div>
+			<div class="panel-footer">
+				<form id="chatForm">
+					<div class="input-group">
+				      <input type="text" class="form-control" id="chatInput">
+				      <span class="input-group-btn">
+				        <button class="btn btn-default" type="submit" id="chatSubmit">Submit</button>
+				      </span>
+				    </div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="vender/jquery/jquery.js"></script>
+<script type="text/javascript" src="vender/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript">
+	var server=io.connect("http://localhost:1337");
+	var content=$("#content");
+	var clientName=$("#clientName");
+	server.on("connect",function(){
+		content.html("Connected");
+		var nickname=prompt("What is your nickname?");
+		server.emit("join",nickname);
+		clientName.text("--"+nickname);
+	});
+	server.on("chat",function(data){
+		content.append("<p>"+data+"</p>");
+	});
+	server.on("status",function(data){
+		content.append("<div><small>"+data+"</small></div>");
+	});
+
+	var chatInput=$("#chatInput");
+	var chatForm=$("#chatForm");
+	chatForm.on("submit",function(event){
+		event.preventDefault();
+		server.emit("message",chatInput.val());
+		chatInput.val("");
+	})
+	
+</script>
+</html>
