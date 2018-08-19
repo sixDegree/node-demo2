@@ -3,7 +3,7 @@
 
 need package: socket.io@.9.19 express
 
-```
+```js
 var app=express();
 var server = require('http').Server(app);
 var io=socket.listen(server);
