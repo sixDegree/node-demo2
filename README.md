@@ -62,8 +62,7 @@ get 	/			"Hello world"
 
 get 	/blocks		["Fixed","Movable","Rotating"]
 get 	/blocks2	["Fixed","Movable","Rotating"]
-get 	/block3		<ul><li>Fixed</li><li>Movable</li><li>Rotating</li></ul>
-
+get 	/block3		"<ul><li>Fixed</li><li>Movable</li><li>Rotating</li></ul>"
 get 	/go			302 -> index.html
 get 	/go2		301 -> index.html
 ```
