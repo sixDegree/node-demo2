@@ -13,10 +13,9 @@ server.listen(1337);
 ### 01.js
 
 code:
-	01.html 	- Client
-	01.js 		- Server
+	- 01.html (Client)
+	- 01.js (Server)
 
-run
 ```
 node 01.js
 ```
@@ -48,9 +47,9 @@ app.listen(1337,function(){
 ### 02.js
 
 code:
-	02.js
+	- 02.js
 
-run
+
 ```
 node 02.js
 ```
@@ -58,26 +57,25 @@ node 02.js
 visit:
 	http://localhost:1337
 
-	```
-	get 	/			"Hello world"
+```
+get 	/			"Hello world"
 
-	get 	/blocks		["Fixed","Movable","Rotating"]
-	get 	/blocks2	["Fixed","Movable","Rotating"]
-	get 	/block3		<ul><li>Fixed</li><li>Movable</li><li>Rotating</li></ul>
+get 	/blocks		["Fixed","Movable","Rotating"]
+get 	/blocks2	["Fixed","Movable","Rotating"]
+get 	/block3		<ul><li>Fixed</li><li>Movable</li><li>Rotating</li></ul>
 
-	get 	/go			302 -> index.html
-	get 	/go2		301 -> index.html
-	```
+get 	/go			302 -> index.html
+get 	/go2		301 -> index.html
+```
 
 
 ### 03.js
 
 code:
-	public/index.html
-	03.js
-	logger.js
+	- public/index.html
+	- 03.js
+	- logger.js
 
-run:
 ```
 node 03.js
 ```
@@ -85,19 +83,19 @@ node 03.js
 visit:
 	http://localhost:1337
 
-	```
-	get 	/
+```
+get 	/
 
-	get 	/blocks				["Fixed","Movable","Rotating","Sdfjd","Hello"]
-	get 	/blocks/:name
-	post 	/blocks
-	delete 	/blocks/:name
+get 	/blocks				["Fixed","Movable","Rotating","Sdfjd","Hello"]
+get 	/blocks/:name
+post 	/blocks
+delete 	/blocks/:name
 
-	get /locations				["Fixed","Movable","Rotating"]
-	get /locations/:name
-	```
+get /locations				["Fixed","Movable","Rotating"]
+get /locations/:name
+```
 
-* post *
+ *post*
 
 - index.html (Client):
 	```js
@@ -145,10 +143,10 @@ visit:
 ### 04.js
 
 code:
-	public/index.html
-	04.js
+	- public/index.html
+	- 04.js
 
-run:
+
 ```
 node 04.js
 ```
@@ -168,11 +166,10 @@ app.route(url)
 ### 05.js
 
 code:
-	public/index.html
-	05.js
-	routes/blocks.js  - export as a node module
+	- public/index.html
+	- 05.js
+	- routes/blocks.js  - export as a node module
 
-run:
 ```
 node 05.js
 ```
